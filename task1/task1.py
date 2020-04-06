@@ -34,7 +34,7 @@ def average(numbers):
 
 
 numbers = []
-with open('task1.txt') as f:
+with open('input.txt') as f:
     for line in f:
         numbers.append(float(line.strip()))
 
