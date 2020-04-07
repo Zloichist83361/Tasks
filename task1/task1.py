@@ -1,5 +1,5 @@
 def percentile(numbers):
-    percentile = float((90.0 * len(numbers) / 100.0 - 0.8))
+    percentile = int((90 * len(numbers) / 100 - 1))
     return percentile
 
 def mediana(numbers):
@@ -35,12 +35,13 @@ def average(numbers):
 
 numbers = []
 with open('input.txt') as f:
+    """получаю массив из чисел файла"""
     for line in f:
         numbers.append(float(line.strip()))
 
 print(numbers)
-print(percentile(numbers))
-print(mediana(numbers))
-print(min(numbers))
-print(max(numbers))
-print(average(numbers))
+print('%.2f' % percentile(numbers))
+print('%.2f' % mediana(numbers))
+print('%.2f' % min(numbers))
+print('%.2f' % max(numbers))
+print('%.2f' % average(numbers))
